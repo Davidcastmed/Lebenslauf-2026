@@ -1,0 +1,5 @@
+{
+  "name": "Interactive German CV",
+  "description": "An interactive SPA for David Castillo's CV in German, featuring an AI assistant powered by the Gemini API to answer questions about his experience and skills.",
+  "requestFramePermissions": []
+}
