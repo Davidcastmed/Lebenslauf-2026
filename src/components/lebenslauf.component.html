@@ -5,7 +5,7 @@
     @if (isSidebarVisible()) {
       <aside class="md:col-span-1 bg-gray-800 text-white p-8 animate-fade-in">
         <div class="flex flex-col items-center md:items-start">
-          <img [src]="profilePicture()" alt="Profilbild David Castillo" class="rounded-lg w-full border border-gray-300 mb-6">
+          <img [src]="profilePicture()" alt="Profilbild David Castillo" class="rounded-lg w-48 mx-auto md:w-full md:mx-0 border border-gray-300 mb-6">
           <h1 class="text-4xl font-bold text-center md:text-left">{{ name() }}</h1>
           <h2 (click)="togglePdfButtonVisibility()" class="text-xl font-light text-blue-300 mt-2 text-center md:text-left cursor-pointer hover:text-blue-200 transition">{{ title() }}</h2>
         </div>

@@ -30,8 +30,8 @@ export class LoginComponent {
   isRequestingAccess = signal(false);
 
   // Login form
-  username = signal('Gast');
-  password = signal('KeepItSimple');
+  username = signal('');
+  password = signal('');
   loginError = signal('');
 
   // Request access form

@@ -66,8 +66,8 @@ interface GalleryProject {
             <!-- Image Gallery -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               @for (image of project.images; track image; let i = $index) {
-                <div (click)="openModal(project, i)" class="group relative rounded-lg overflow-hidden cursor-pointer border border-gray-200 shadow-sm transition-shadow duration-300 hover:shadow-md">
-                  <img [src]="image" [alt]="project.title + ' Bild ' + (i + 1)" class="w-full h-auto object-cover aspect-video transition-transform duration-300 group-hover:scale-105">
+                <div (click)="openModal(project, i)" class="group relative rounded-lg overflow-hidden cursor-pointer border border-gray-200 shadow-sm transition-shadow duration-300 hover:shadow-md bg-gray-100 aspect-video">
+                  <img [src]="image" [alt]="project.title + ' Bild ' + (i + 1)" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
                   <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -175,7 +175,7 @@ export class ProjektenComponent {
         'https://i.postimg.cc/JzTHzWx5/4.png',
         'https://i.postimg.cc/CxvnxV76/5.png',
         'https://i.postimg.cc/vZPxZdhK/6.png',
-        'https://i.postimg.cc/Z5fv5hH2/7.png',
+        'https://i.postimg.cc/Z5fv5h2/7.png',
         'https://i.postimg.cc/rwhRwLjB/8.png'
       ],
       demoInfo: {
