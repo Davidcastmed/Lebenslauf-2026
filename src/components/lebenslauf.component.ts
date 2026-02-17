@@ -50,6 +50,19 @@ interface SkillCategory {
         transform: translateY(0);
       }
     }
+    .slide-in {
+      animation: slideIn 0.3s ease-out forwards;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -269,6 +282,7 @@ export class LebenslaufComponent {
   isSidebarVisible = signal(false);
   isPdfButtonVisible = signal(false);
   isLoadingPdf = signal(false);
+  isPersonalInfoVisible = signal(false);
 
   toggleSidebar(): void {
     this.isSidebarVisible.update(v => !v);
@@ -276,6 +290,10 @@ export class LebenslaufComponent {
 
   togglePdfButtonVisibility(): void {
     this.isPdfButtonVisible.update(v => !v);
+  }
+
+  togglePersonalInfo(): void {
+    this.isPersonalInfoVisible.update(v => !v);
   }
 
   async downloadAsPdf(cvContainer: HTMLElement): Promise<void> {
